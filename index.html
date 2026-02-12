@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CodeX Converter</title>
+
+    <style>
+        body {
+          background: #0f172a;
+          color: #e5e7eb;
+          font-family: monospace;
+          padding: 15px;
+        }
+
+        h1 {
+          text-align: center;
+          color: #38bdf8;
+        }
+
+        select, textarea, button {
+          width: 100%;
+          margin-top: 10px;
+          padding: 10px;
+          font-size: 14px;
+          background: #020617;
+          color: #e5e7eb;
+          border: 1px solid #38bdf8;
+        }
+
+        button {
+          background: #38bdf8;
+          color: #020617;
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        textarea {
+          min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CodeX Converter</h1>
+
+<select id="mode">
+    <option value="text-morse">Text → Morse</option>
+    <option value="morse-text">Morse → Text</option>
+    <option value="text-binary">Text → Binary</option>
+    <option value="binary-text">Binary → Text</option>
+    <option value="binary-hex">Binary → Hex</option>
+    <option value="hex-binary">Hex → Binary</option>
+</select>
+
+<textarea id="input" placeholder="Enter input here..."></textarea>
+
+<button onclick="convert()">CONVERT</button>
+
+<textarea id="output" placeholder="Output will appear here..." readonly></textarea>
+
+<script src="logic.js"></script>
+
+</body>
+</html>
